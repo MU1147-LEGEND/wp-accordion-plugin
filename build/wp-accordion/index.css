@@ -1,1 +1,94 @@
-.wp-block-create-block-wp-accordion{border:1px dotted red}.acc-checkbox{display:none!important}.acc-item:hover{background-color:#f0f0f0}.acc-item{transition:all .3s ease}.acc-icon{display:inline-block;transition:transform .3s ease;-webkit-user-select:none!important;-moz-user-select:none!important;user-select:none!important}.acc-content{display:block!important;height:auto;overflow:hidden;transition:height .3s ease!important}.acc-checkbox:checked+.acc-item .acc-icon{content:"−";transform:rotate(90deg)}.acc-checkbox:not(:checked)~.acc-content{display:none!important;height:0!important;transition:height .3s ease!important}.acc-checkbox:checked~.acc-content{display:block!important;height:auto!important;transition:height .3s ease!important}.no-select{-webkit-user-select:none!important;-moz-user-select:none!important;user-select:none!important}
+/*!*****************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[4].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[4].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[4].use[3]!./src/wp-accordion/editor.scss ***!
+  \*****************************************************************************************************************************************************************************************************************************************************/
+@charset "UTF-8";
+/**
+ * The following styles get applied inside the editor only.
+ *
+ * Replace them with your own styles or remove the file completely.
+ */
+.wp-block-create-block-wp-accordion {
+  border: 1px dotted #f00;
+}
+.acc-checkbox {
+  display: none !important;
+}
+.acc-item:hover {
+  background-color: #f0f0f0;
+}
+.acc-item {
+  transition: all 0.3s ease;
+}
+.acc-icon {
+  transition: transform 0.3s ease;
+  display: inline-block;
+  -webkit-user-select: none !important;
+     -moz-user-select: none !important;
+          user-select: none !important;
+}
+.acc-content {
+  display: block !important;
+  overflow: hidden;
+  height: auto;
+  transition: height 0.3s ease !important;
+}
+/* Show/hide content based on checkbox state */
+.acc-checkbox:checked + .acc-item .acc-icon {
+  transform: rotate(90deg);
+  content: "−";
+}
+.acc-checkbox:not(:checked) ~ .acc-content {
+  display: none !important;
+  height: 0 !important;
+  transition: height 0.3s ease !important;
+}
+.acc-checkbox:checked ~ .acc-content {
+  display: block !important;
+  height: auto !important;
+  transition: height 0.3s ease !important;
+}
+.no-select {
+  -webkit-user-select: none !important; /* Safari */ /* IE 10 and IE 11 */
+  -moz-user-select: none !important;
+       user-select: none !important; /* Standard syntax */
+}
+/*!**********************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[4].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[4].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[4].use[3]!./src/wp-accordion/style-index.scss ***!
+  \**********************************************************************************************************************************************************************************************************************************************************/
+/**
+ * The following styles get applied on the front end and the back end.
+ */
+.wp-block-create-block-wp-accordion .acc-checkbox {
+  display: none !important;
+}
+.wp-block-create-block-wp-accordion .acc-item {
+  transition: all 0.3s ease;
+}
+.wp-block-create-block-wp-accordion .acc-item:hover {
+  opacity: 0.95;
+}
+.wp-block-create-block-wp-accordion .acc-icon {
+  transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  display: inline-block;
+}
+.wp-block-create-block-wp-accordion .acc-content {
+  overflow: hidden;
+  max-height: 0;
+  opacity: 0;
+  padding: 0;
+  will-change: max-height, opacity;
+  transition: max-height 0.4s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.wp-block-create-block-wp-accordion {
+  /* Show/hide content based on checkbox state */
+}
+.wp-block-create-block-wp-accordion .acc-checkbox:checked + .acc-item .acc-icon {
+  transform: rotate(90deg);
+}
+.wp-block-create-block-wp-accordion .acc-checkbox:checked ~ .acc-content {
+  max-height: 500px;
+  opacity: 1;
+  padding: inherit;
+}
+
+/*# sourceMappingURL=index.css.map*/

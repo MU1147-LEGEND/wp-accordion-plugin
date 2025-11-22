@@ -9,6 +9,7 @@ import {
 
 import { __ } from "@wordpress/i18n";
 import "./editor.scss";
+import "./style-index.scss";
 
 // styles
 const blockStyle = {
@@ -50,7 +51,7 @@ export default function Edit({ attributes, setAttributes }) {
 			...items,
 			{
 				title: `Accordion Title ${items.length + 1}`,
-				description: `Accordion Description ${items.length + 1}`,
+				description: `lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.`,
 			},
 		];
 

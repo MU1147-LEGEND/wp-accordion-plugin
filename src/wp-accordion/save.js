@@ -1,5 +1,7 @@
 import { useBlockProps } from "@wordpress/block-editor";
+import "./style-index.scss";
 
+// styles
 const blockStyle = {
 	border: "1px solid #ccc",
 	padding: "10px",
@@ -9,6 +11,7 @@ const blockStyle = {
 };
 
 const titleStyle = { textAlign: "center", fontWeight: "600" };
+// styles end
 
 export default function save({ attributes }) {
 	const title = attributes.title;
@@ -56,7 +59,11 @@ export default function save({ attributes }) {
 							>
 								<h4 style={{ color: textColor, margin: 0 }}>{item.title}</h4>
 								<span
-									style={{ fontSize: "20px", fontWeight: "bold" }}
+									style={{
+										color: textColor,
+										fontSize: "20px",
+										fontWeight: "bold",
+									}}
 									className="acc-icon"
 								>
 									▶
