@@ -1,0 +1,1 @@
+document.addEventListener("DOMContentLoaded",function(){document.querySelectorAll(".wp-accordion-items").forEach(e=>{const c=e.querySelectorAll(".acc-checkbox");c.forEach(e=>{e.addEventListener("change",function(){this.checked&&c.forEach(e=>{e!==this&&(e.checked=!1)})})})})});

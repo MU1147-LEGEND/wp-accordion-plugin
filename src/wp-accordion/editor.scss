@@ -1,0 +1,58 @@
+/**
+ * The following styles get applied inside the editor only.
+ *
+ * Replace them with your own styles or remove the file completely.
+ */
+
+.wp-block-create-block-wp-accordion {
+	border: 1px dotted #f00;
+}
+
+.acc-checkbox {
+	display: none !important;
+}
+
+.acc-item {
+	&:hover {
+		background-color: #f0f0f0;
+	}
+
+	transition: all 0.3s ease;
+}
+
+.acc-icon {
+	transition: transform 0.3s ease;
+	display: inline-block;
+	user-select: none !important;
+}
+
+.acc-content {
+	display: block !important;
+	overflow: hidden;
+	height: auto;
+	transition: height 0.3s ease !important;
+}
+
+/* Show/hide content based on checkbox state */
+.acc-checkbox:checked + .acc-item .acc-icon {
+	transform: rotate(90deg);
+	content: "−";
+}
+
+.acc-checkbox:not(:checked) ~ .acc-content {
+	display: none !important;
+	height: 0 !important;
+	transition: height 0.3s ease !important;
+}
+
+.acc-checkbox:checked ~ .acc-content {
+	display: block !important;
+	height: auto !important;
+	transition: height 0.3s ease !important;
+}
+
+.no-select {
+	-webkit-user-select: none !important; /* Safari */
+	-ms-user-select: none !important; /* IE 10 and IE 11 */
+	user-select: none !important; /* Standard syntax */
+}

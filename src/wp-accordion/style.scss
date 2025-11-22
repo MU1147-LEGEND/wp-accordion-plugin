@@ -1,0 +1,50 @@
+/**
+ * The following styles get applied both on the front of your site
+ * and in the editor.
+ *
+ * Replace them with your own styles or remove the file completely.
+ */
+
+// .wp-block-create-block-wp-accordion {
+// 	background-color: #21759b;
+// 	color: #fff;
+// 	padding: 2px;
+// }
+
+.no-select {
+	-webkit-user-select: none !important; /* Safari */
+	-ms-user-select: none !important; /* IE 10 and IE 11 */
+	user-select: none !important; /* Standard syntax */
+}
+
+.acc-checkbox {
+	display: none !important;
+}
+
+.acc-item {
+	&:hover {
+		background-color: #f0f0f0;
+	}
+
+	transition: all 0.3s ease;
+}
+
+.acc-icon {
+	transition: transform 0.3s ease;
+	display: inline-block;
+	user-select: none !important;
+}
+
+/* Show/hide content based on checkbox state */
+.acc-checkbox:checked + .acc-item .acc-icon {
+	transform: rotate(90deg);
+
+}
+
+.acc-checkbox:not(:checked) ~ .acc-content {
+	display: none !important;
+}
+
+.acc-checkbox:checked ~ .acc-content {
+	display: block !important;
+}
