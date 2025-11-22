@@ -1,5 +1,5 @@
 === Wp Accordion ===
-Contributors:      The WordPress Contributors
+Contributors:      Mohammad Ullah
 Tags:              block
 Tested up to:      6.7
 Stable tag:        0.1.0
